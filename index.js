@@ -117,20 +117,17 @@ function getMostCommonAnimal(animals) {
   //return highest count
   let biggestCount = {};
   let mostFrequentCount = {};
-  let number = -Infinity;
+  let number = 0;
 
   for (let i = 0; i < animals.length; i++) {
-    console.log("hfioefoeiwfhgoehgfoefh", animals);
-    if (animals[i].count > number) {
-      return (biggestCount = animals[i]);
+    //console.log("hfioefoeiwfhgoehgfoefh", animals);
+    if (animals[i].count > 1) {
+      return (mostFrequentCount = animals[i]);
     }
-    // return `${biggestCount}``${mostFrequentCount}`;
+    // if (animals[i].count > number) {
+    //   return (biggestCount = animals[i]);
+    // }
   }
-  // for (let i = 0; i < animals.length; i++) {
-  //   if (animals[i].count > biggestCount) {
-  //     biggestCount = animals[i];
-  //   }
-  // }
 
   //return most refrequent animal that appears firs if its more than one with came count
   return biggestCount;
